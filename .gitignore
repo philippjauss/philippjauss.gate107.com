@@ -227,3 +227,6 @@ img/._twitter-bird-white-on-blue.png
 img/._uebermichPhoto.png
 index_bkp.html
 BingSiteAuth.xml
+/nbproject/private/
+nbproject/project.properties
+nbproject/project.xml
