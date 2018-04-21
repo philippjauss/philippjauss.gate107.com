@@ -51,7 +51,8 @@ h2 {
   display: grid;
   grid-row-gap: 0;
   grid-template-columns: 50% 50%;
-  grid-template-rows: auto; }
+  grid-template-rows: 18rem;
+  grid-auto-rows: auto; }
   @media (min-width: 600px) {
     .contentCell {
       grid-template-columns: 30% 70%;
