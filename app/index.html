@@ -1,115 +1,87 @@
 <!DOCTYPE html>
-<!--[if IE 9]><html class="lt-ie10" lang="de" > <![endif]-->
-<html class="no-js" lang="de">
+<html lang="de">
 
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="Homepage von Philipp Jauss">
     <meta name="keywords" content="Philipp Jauss, Homepage">
     <meta name="author" content="Philipp Jauss">
     <title>Philipp Jauss Home</title>
-    <link rel="stylesheet" href="css/normalize.min.css">
-    <link rel="stylesheet" href="css/foundation.min.css">
-    <link rel="stylesheet" href="customcss/site.css" />
-    <script>
-        WebFontConfig = {
-            google: {
-                families: ['Roboto:300,400,500']
-            }
-        };
-        (function (d) {
-            var wf = d.createElement('script'),
-                s = d.scripts[0];
-            wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js';
-            wf.async = true;
-            s.parentNode.insertBefore(wf, s);
-        })(document);
-    </script>
-    <script>
-        (function (i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r;
-            i[r] = i[r] || function () {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date();
-            a = s.createElement(o),
-                m = s.getElementsByTagName(o)[0];
-            a.async = 1;
-            a.src = g;
-            m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-
-        ga('create', 'UA-13077377-4', 'gate107.com');
-        ga('send', 'pageview');
-    </script>
+    <link rel="stylesheet" href="css/site.css" />
 </head>
 
 <body>
-    <div class="row">
-        <!-- Sidebar -->
-        <div class="row">
-            <div class="medium-12 columns fullwidthmobile">
-                <nav class="nav">
-                    <section>
-                        <a id="menu-toggle" class="anchor-link" href="#">Menu</a>
-                        <ul id="meinMenu" class="flexmenu simple-toggle">
-                            <li class="name"><a href="./index.html">Philipp <br> Jauss</a></li>
-                            <li class="active"><a href="./index.html">Home</a></li>
-                            <li><a href="./uebermich.html">Ich</a></li>
-                            <li><a href="./cv.html">CV</a></li>
-                            <li><a href="./kontakt.html">Kontakt</a></li>
+    <div class="page">
+
+
+        <div class="pageGrid">
+            <div class="navigationCell">
+                <nav class="navigation">
+
+                    <input type="checkbox" id="menuToggle" />
+                    <label class="menuName menuName--left" for="menuToggle">
+                        <a class="menuNameLink" href="./index.html">Philipp Jauss</a>
+
+                        <div class="menuIcon">
+                            <div class="menuIconLine topLine"></div>
+                            <div class="menuIconLine middleLine"></div>
+                            <div class="menuIconLine bottomLine"></div>
+                        </div>
+
+                    </label>
+
+                    <div class="menuEntries menuEntries--left">
+                        <ul id="mainMenu">
+                            <li>
+                                <a class="mainMenuLink active" href="./index.html">Home</a>
+                            </li>
+                            <li>
+                                <a class="mainMenuLink" href="./uebermich.html">Ich</a>
+                            </li>
+                            <li>
+                                <a class="mainMenuLink" href="./cv.html">CV</a>
+                            </li>
+                            <li>
+                                <a class="mainMenuLink" href="./kontakt.html">Kontakt</a>
+                            </li>
                         </ul>
-                    </section>
+                    </div>
+
                 </nav>
             </div>
-        </div>
-        <!-- Main Content -->
-        <div class="row">
-            <div class="medium-9 medium-offset-2 columns">
-                <div class="row mainContent">
-                    <div class="large-12 columns">
-                        <div class="slogan">
-                            <p>Mit</p>
-                            <h1>Leidenschaft</h1>
-                            <p>zum<br> perfekten
-                                <br> Code
-                            </p>
-                            <br>
-                            <br>
-                            <br>
-                        </div>
-                        <div>
-                            <img id="hpimg1" class="faded" src="img/HP_4052.jpg" />
-                        </div>
-                        <div>
-                            <img id="hpimg2" class="faded" src="img/HP_4198.jpg" />
-                        </div>
-                        <div>
-                            <img id="hpimg3" class="faded" src="img/HP_4096.jpg" />
-                        </div>
-                        <div>
-                            <img id="hpimg4" class="faded" src="img/HP_4251.jpg" />
-                        </div>
-                        <div>
-                            <img id="hpimg5" class="faded" src="img/HP_4239.jpg" />
-                        </div>
+            <div class="contentCell">
+
+                <div class="contentBodyCell contentBodyCell--add-mobile-top-margin contentBodyCell--keep-column-layout">
+                    <div>
+                        <img id="hpimg1" src="img/HP_4052.jpg" />
+                    </div>
+                    <div>
+                        <img id="hpimg2" src="img/HP_4198.jpg" />
+                    </div>
+                    <div>
+                        <img id="hpimg3" src="img/HP_4096.jpg" />
+                    </div>
+                    <div>
+                        <img id="hpimg4" src="img/HP_4251.jpg" />
+                    </div>
+                    <div>
+                        <img id="hpimg5" src="img/HP_4239.jpg" />
+                    </div>
+                </div>
+                <div class="contentBodyCell contentBodyCell--keep-column-layout">
+                    <div class="slogan">
+                        <p>Mit</p>
+                        <p class="slogan__highlight">Leidenschaft</p>
+                        <p>zum</p>
+                        <p>perfekten</p>
+                        <p>Code</p>
                     </div>
                 </div>
             </div>
-            <!-- medium-9 medium-offset-2 columns -->
         </div>
-        <!-- row -->
-        <script src="js/vendor/modernizr.js"></script>
-        <script src="js/vendor/jquery.js"></script>
-        <script src="js/foundation.min.js"></script>
-        <script src="customjs/site.js"></script>
-        <script>
-            $(document).foundation();
 
-            $(".faded").each(function (i) {
-                $(this).delay(i * 100).fadeIn(10);
-            });
-        </script>
     </div>
 </body>
 

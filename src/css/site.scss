@@ -45,8 +45,11 @@ body {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    background-color: $grey;
+    background-color: $white;
     line-height: 1.6;
+    @include breakpoint(phablet){
+        background-color: $grey;
+    }
     @include breakpoint(tablet) {
         max-width: 900px;
     }
@@ -83,13 +86,16 @@ h2 {
 }
 
 .contentCell {
+    height: fit-content;
     display: grid;
     grid-row-gap: 0;
     grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
     @include breakpoint(phablet) {
         grid-template-columns: 30% 70%;
         grid-row-gap: 1.75rem;
     }
+    &__homepage {}
 }
 
 .contentBodyCell {
@@ -285,4 +291,92 @@ h2 {
     background-color: $white;
     margin-top: 8px;
     transition: all 0.3s ease-in-out;
+}
+
+#hpimg1 {
+    position: absolute;
+    top: 5rem;
+    z-index: 20;
+    transform: scale(0.7) rotate(-5deg);
+    -ms-transform: scale(0.7) rotate(-5deg);
+    /* IE 9 */
+    -webkit-transform: scale(0.7) rotate(-5deg);
+    /* Opera, Chrome, and Safari */
+    @include breakpoint(phablet) {
+        top: 14rem;
+    }
+}
+
+#hpimg2 {
+    position: absolute;
+    top: 14rem;
+    z-index: 21;
+    transform: scale(0.7) rotate(7deg);
+    -ms-transform: scale(0.7) rotate(7deg);
+    /* IE 9 */
+    -webkit-transform: scale(0.7) rotate(7deg);
+    /* Opera, Chrome, and Safari */
+    @include breakpoint(phablet) {
+        top: 23rem;
+    }
+}
+
+#hpimg3 {
+    position: absolute;
+    top: 14rem;
+    padding-left: 8rem;
+    z-index: 22;
+    transform: scale(0.7) rotate(-8deg);
+    -ms-transform: scale(0.7) rotate(-8deg);
+    /* IE 9 */
+    -webkit-transform: scale(0.7) rotate(-8deg);
+    /* Opera, Chrome, and Safari */
+    @include breakpoint(phablet) {
+        top: 23rem;
+    }
+}
+
+#hpimg4 {
+    position: absolute;
+    top: 22rem;
+    z-index: 23;
+    transform: scale(0.7) rotate(-5deg);
+    -ms-transform: scale(0.7) rotate(-5deg);
+    /* IE 9 */
+    -webkit-transform: scale(0.7) rotate(-5deg);
+    /* Opera, Chrome, and Safari */
+    @include breakpoint(phablet) {
+        top: 31rem;
+    }
+}
+
+#hpimg5 {
+    position: absolute;
+    top: 22rem;
+    padding-left: 8rem;
+    z-index: 24;
+    transform: scale(0.7) rotate(10deg);
+    -ms-transform: scale(0.7) rotate(10deg);
+    /* IE 9 */
+    -webkit-transform: scale(0.7) rotate(10deg);
+    /* Opera, Chrome, and Safari */
+    @include breakpoint(phablet) {
+        top: 31rem;
+    }
+}
+
+.slogan {
+    z-index: 30;
+    width: 80%;
+    padding-top: 2rem;
+    text-align: right; //position: absolute;
+    &__highlight {
+        color: $blue;
+        font-size: 1.5rem;
+        font-weight: 300;
+    }
+    @include breakpoint(phablet) {
+        padding-top: 15rem;
+        width: 60%;
+    }
 }
