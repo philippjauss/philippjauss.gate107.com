@@ -5,7 +5,7 @@
         }
     }
     @else if $point==desktop {
-        @media (min-width: 1024px) {
+        @media (min-width: 1280px) {
             @content;
         }
     }
@@ -20,7 +20,7 @@
         }
     }
     @else if $point==phablet {
-        @media (min-width: 600px) {
+        @media (min-width: 600px) and (min-height: 721px) {
             @content;
         }
     }
@@ -32,13 +32,15 @@ $white: rgb(255, 255, 255);
 * {
     margin: 0;
     padding: 0;
+    font-weight: 300;
 }
 
 html {
     font-size: 100%;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-    font-weight: 300;
-    margin-left: calc(100vw - 100%);
+    @include breakpoint(laptop) {
+        margin-left: calc(100vw - 100%);
+    }
 }
 
 body {
@@ -47,20 +49,26 @@ body {
     margin-right: auto;
     background-color: $white;
     line-height: 1.6;
-    @include breakpoint(phablet){
+    @include breakpoint(phablet) {
         background-color: $grey;
     }
-    @include breakpoint(tablet) {
+    @include breakpoint(laptop) {
         max-width: 900px;
     }
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
 }
 
 h1,
 h2 {
     color: $blue;
-    font-size: 1.5rem;
     margin-top: 3rem;
-    font-weight: 300;
 }
 
 h2 {
@@ -70,7 +78,7 @@ h2 {
 }
 
 .page {
-    @include breakpoint(desktop) {
+    @include breakpoint(laptop) {
         padding: 0px 20px 0px 20px;
         background-color: white;
     }
@@ -81,7 +89,7 @@ h2 {
     display: grid;
     grid-template-columns: 100%;
     @include breakpoint(phablet) {
-        grid-template-columns: 13% 87%;
+        grid-template-columns: 6rem auto;
     }
 }
 
