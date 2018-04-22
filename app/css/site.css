@@ -239,7 +239,7 @@ h2 {
   /* Opera, Chrome, and Safari */ }
   @media (min-width: 600px) and (min-height: 721px) {
     #hpimg1 {
-      top: 14rem; } }
+      top: 2rem; } }
 
 #hpimg2 {
   position: absolute;
@@ -252,7 +252,7 @@ h2 {
   /* Opera, Chrome, and Safari */ }
   @media (min-width: 600px) and (min-height: 721px) {
     #hpimg2 {
-      top: 23rem; } }
+      top: 12rem; } }
 
 #hpimg3 {
   position: absolute;
@@ -266,7 +266,8 @@ h2 {
   /* Opera, Chrome, and Safari */ }
   @media (min-width: 600px) and (min-height: 721px) {
     #hpimg3 {
-      top: 23rem; } }
+      top: 12rem;
+      padding-left: 9rem; } }
 
 #hpimg4 {
   position: absolute;
@@ -279,7 +280,7 @@ h2 {
   /* Opera, Chrome, and Safari */ }
   @media (min-width: 600px) and (min-height: 721px) {
     #hpimg4 {
-      top: 31rem; } }
+      top: 22rem; } }
 
 #hpimg5 {
   position: absolute;
@@ -293,7 +294,8 @@ h2 {
   /* Opera, Chrome, and Safari */ }
   @media (min-width: 600px) and (min-height: 721px) {
     #hpimg5 {
-      top: 31rem; } }
+      top: 21rem;
+      padding-left: 9rem; } }
 
 .slogan {
   z-index: 30;
@@ -306,5 +308,5 @@ h2 {
     font-weight: 300; }
   @media (min-width: 600px) and (min-height: 721px) {
     .slogan {
-      padding-top: 15rem;
-      width: 60%; } }
+      width: 60%;
+      padding-top: 3rem; } }

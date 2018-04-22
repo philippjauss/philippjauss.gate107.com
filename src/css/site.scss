@@ -310,7 +310,7 @@ h2 {
     -webkit-transform: scale(0.7) rotate(-5deg);
     /* Opera, Chrome, and Safari */
     @include breakpoint(phablet) {
-        top: 14rem;
+        top: 2rem;
     }
 }
 
@@ -324,8 +324,9 @@ h2 {
     -webkit-transform: scale(0.7) rotate(7deg);
     /* Opera, Chrome, and Safari */
     @include breakpoint(phablet) {
-        top: 23rem;
+        top: 12rem;
     }
+
 }
 
 #hpimg3 {
@@ -339,7 +340,8 @@ h2 {
     -webkit-transform: scale(0.7) rotate(-8deg);
     /* Opera, Chrome, and Safari */
     @include breakpoint(phablet) {
-        top: 23rem;
+        top: 12rem;
+        padding-left: 9rem;
     }
 }
 
@@ -353,8 +355,10 @@ h2 {
     -webkit-transform: scale(0.7) rotate(-5deg);
     /* Opera, Chrome, and Safari */
     @include breakpoint(phablet) {
-        top: 31rem;
+        top: 22rem;
+        
     }
+    
 }
 
 #hpimg5 {
@@ -368,7 +372,8 @@ h2 {
     -webkit-transform: scale(0.7) rotate(10deg);
     /* Opera, Chrome, and Safari */
     @include breakpoint(phablet) {
-        top: 31rem;
+        top: 21rem;
+        padding-left: 9rem;
     }
 }
 
@@ -383,7 +388,7 @@ h2 {
         font-weight: 300;
     }
     @include breakpoint(phablet) {
-        padding-top: 15rem;
         width: 60%;
+        padding-top: 3rem;
     }
 }
