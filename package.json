@@ -1,0 +1,32 @@
+{
+  "name": "philippjauss.gate107.com",
+  "version": "1.0.0",
+  "description": "CV Page",
+  "main": "index.js",
+  "scripts": {
+    "watch": "gulp",
+    "build": "gulp build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/philippjauss/philippjauss.gate107.com.git"
+  },
+  "author": "Philipp Jauss",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/philippjauss/philippjauss.gate107.com/issues"
+  },
+  "homepage": "https://github.com/philippjauss/philippjauss.gate107.com#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.8",
+    "gulp": "^3.9.1",
+    "gulp-htmlmin": "^4.0.0",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-inline-source": "^3.1.0",
+    "gulp-sass": "^4.0.1",
+    "imagemin-gifsicle": "^5.1.0",
+    "imagemin-jpegtran": "^5.0.2",
+    "imagemin-optipng": "^5.2.1",
+    "imagemin-pngquant": "^5.0.0"
+  }
+}
