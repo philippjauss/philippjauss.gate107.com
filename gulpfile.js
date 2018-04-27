@@ -8,6 +8,7 @@ var gifsicle = require('imagemin-gifsicle');
 var optipng = require('imagemin-optipng');
 var sass = require('gulp-sass');
 var inlineSource = require('gulp-inline-source');
+var autoprefix = require('gulp-autoprefixer');
 
 
 
@@ -16,6 +17,7 @@ var inlineSource = require('gulp-inline-source');
 gulp.task('sass', function () {
     return gulp.src('src/css/**/*.scss')
       .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+      .pipe(autoprefix({browsers: ['last 2 versions'], cascade: false}))
       .pipe(gulp.dest('app/css'))
       .pipe(gulp.dest('src/css'));
   });
