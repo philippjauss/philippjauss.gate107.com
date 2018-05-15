@@ -84,6 +84,9 @@ gulp.task('browser-sync', ['convertImages', 'minifyHTML'], function () {
     browserSync.init({
         server: {
             baseDir: 'app',
+            serveStaticOptions: {
+                extensions: ['html']
+            },
             middleware: function (req, res, next) {
                 res.setHeader('Access-Control-Allow-Origin', '*');
                 next();
