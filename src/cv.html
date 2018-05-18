@@ -4,26 +4,14 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="Beruflicher Werdegang von Philipp Jauss">
     <meta name="keywords" content="Philipp Jauss, CV, Lebenslauf">
     <meta name="author" content="Philipp Jauss">
     <title>Philipp Jauss CV</title>
-    <link inline rel="stylesheet" href="/css/site.css?v=2.1">
-    <!-- <script>
-        WebFontConfig = {
-            google: {
-                families: ['Roboto:300,400,500']
-            }
-        };
-        (function (d) {
-            var wf = d.createElement('script'),
-                s = d.scripts[0];
-            wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js';
-            wf.async = true;
-            s.parentNode.insertBefore(wf, s);
-        })(document);
-
-    </script>
+    <link inline rel="stylesheet" href="/css/site.css">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#0046a0"/>
     <!-- Google Analytics -->
     <script>
         window.ga = window.ga || function () {
@@ -397,6 +385,13 @@
         </div>
 
     </div>
+    <script>
+        if ('serviceWorker' in navigator) {
+          window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/sw.js');
+          });
+        }
+        </script>
 </body>
 
 </html>

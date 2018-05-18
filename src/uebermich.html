@@ -9,7 +9,9 @@
     <meta name="keywords" content="Philipp Jauss, about, über mich">
     <meta name="author" content="Philipp Jauss">
     <title>Philipp Jauss Über mich</title>
-    <link inline rel="stylesheet" href="/css/site.css?v=2.1" />
+    <link inline rel="stylesheet" href="/css/site.css" />
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#0046a0"/>
     <!-- Google Analytics -->
     <script>
         window.ga = window.ga || function () {
@@ -116,7 +118,7 @@
                     </p>
                     <p>
                         Wieso ausgerechnet Astrophysik? Daran ist ganz einfach
-                        <a href="http://de.wikipedia.org/wiki/Harald_Lesch" target="_blank">Prof. Harald Lesch</a> schuld. Er hat für meinen Geschmack einfach den Dreh raus, einem die Dinge
+                        <a href="http://de.wikipedia.org/wiki/Harald_Lesch" target="_blank" rel="noopener">Prof. Harald Lesch</a> schuld. Er hat für meinen Geschmack einfach den Dreh raus, einem die Dinge
                         zu erklären und meine Phantasie für diese Themen anzuregen.
                     </p>
                 </div>
@@ -140,6 +142,14 @@
         </div>
 
     </div>
+    <script>
+        // Check that service workers are registered     
+        if ('serviceWorker' in navigator) {
+          window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/sw.js');
+          });
+        }
+        </script>
 </body>
 
 </html>

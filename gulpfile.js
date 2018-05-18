@@ -10,9 +10,20 @@ var webp = require('gulp-webp');
 var sass = require('gulp-sass');
 var inlineSource = require('gulp-inline-source');
 var autoprefix = require('gulp-autoprefixer');
+const workboxBuild = require('workbox-build');
 
 
 
+gulp.task('service-worker', function() {
+    return workboxBuild.injectManifest({
+      swSrc: 'src/sw.js',
+      swDest: 'app/sw.js',
+      globDirectory: 'app',
+      globPatterns: [
+        '**\/*.{js,html,png,webp,jpg,json,ico}',
+      ]
+    });
+  });
 
 
 gulp.task('sass', function () {
@@ -30,7 +41,7 @@ gulp.task('sass', function () {
 
 
 // minify html
-gulp.task('minifyHTML', ['sass'], function () {
+gulp.task('minifyHTML', ['sass','service-worker'], function () {
     return gulp.src('src/*.html')
         .pipe(inlineSource())
         .pipe(htmlmin({

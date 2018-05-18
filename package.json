@@ -30,6 +30,7 @@
     "imagemin-jpegtran": "^5.0.2",
     "imagemin-optipng": "^5.2.1",
     "imagemin-pngquant": "^5.0.0",
-    "imagemin-webp": "^4.1.0"
+    "imagemin-webp": "^4.1.0",
+    "workbox-build": "^3.2.0"
   }
 }
