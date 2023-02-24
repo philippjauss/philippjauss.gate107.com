@@ -2,7 +2,7 @@ importScripts('https://storage.googleapis.com/workbox-cdn/releases/3.2.0/workbox
 workbox.precaching.precacheAndRoute([
   {
     "url": "cv.html",
-    "revision": "13880552cda482e3f78aa5a548cac9b6"
+    "revision": "d41ee2d938cca66bf8696538ff8dfc01"
   },
   {
     "url": "favicon.ico",
@@ -170,11 +170,11 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "index.html",
-    "revision": "6a7c12651f5a443c5952f2ebc8e740cd"
+    "revision": "591a3fcbe688c52eb52da018dc7e2d37"
   },
   {
     "url": "kontakt.html",
-    "revision": "5285de8c8b79ec5b921be20c127a2264"
+    "revision": "2846cf915fc0d6c321ff742daeaa84d4"
   },
   {
     "url": "manifest.json",
@@ -182,7 +182,7 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "uebermich.html",
-    "revision": "fa4552f71840018bc575b4202205211c"
+    "revision": "0cf253155426d9632942c22b325f9f91"
   }
 ]);
 workbox.googleAnalytics.initialize();

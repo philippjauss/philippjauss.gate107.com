@@ -24,13 +24,14 @@
     "gulp-htmlmin": "^4.0.0",
     "gulp-imagemin": "^4.1.0",
     "gulp-inline-source": "^3.1.0",
-    "gulp-sass": "^4.0.1",
+    "gulp-sass": "^5.1.0",
     "gulp-webp": "^3.0.0",
     "imagemin-gifsicle": "^5.1.0",
     "imagemin-jpegtran": "^5.0.2",
     "imagemin-optipng": "^5.2.1",
-    "imagemin-pngquant": "^5.0.0",
+    "imagemin-pngquant": "^9.0.2",
     "imagemin-webp": "^4.1.0",
-    "workbox-build": "^3.2.0"
+    "workbox-build": "^3.2.0",
+    "node-sass": "^4.11.0"
   }
 }
