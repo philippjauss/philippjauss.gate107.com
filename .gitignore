@@ -232,3 +232,6 @@ nbproject/project.properties
 nbproject/project.xml
 
 node_modules
+.yarn
+.pnp.cjs
+.pnp.loader.mjs
