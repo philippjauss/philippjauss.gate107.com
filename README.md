@@ -29,7 +29,6 @@ npm run serve
 │   └── sw.js         # Service worker source
 ├── app/              # Build output (git-ignored)
 ├── build.mjs         # Build script
-├── Makefile          # CLI shortcuts (make build, make watch...)
 └── package.json
 ```
 
