@@ -45,7 +45,7 @@ async function compileSass() {
 
 async function inlineAndMinifyHTML() {
   await ensureDir(APP);
-  const files = ['index.html', 'uebermich.html', 'cv.html', 'kontakt.html'];
+  const files = (await readdir(SRC)).filter(f => f.endsWith('.html'));
   for (const file of files) {
     const srcPath = resolve(SRC, file);
     try {
@@ -143,7 +143,7 @@ async function processImages() {
 }
 
 async function copyStatic() {
-  const staticFiles = ['manifest.json', 'robots.txt', 'sitemap.xml', 'favicon.ico', 'cv.pdf', 'cvphilippjauss.pdf'];
+  const staticFiles = ['.htaccess', 'manifest.json', 'robots.txt', 'sitemap.xml', 'favicon.ico', 'cv.pdf', 'cvphilippjauss.pdf'];
   for (const file of staticFiles) {
     const srcPath = resolve(SRC, file);
     try {
