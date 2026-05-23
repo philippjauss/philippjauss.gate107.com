@@ -1,11 +1,13 @@
 {
   "name": "philippjauss.gate107.com",
-  "version": "1.0.0",
-  "description": "CV Page",
-  "main": "index.js",
+  "version": "2.0.0",
+  "description": "Personal website - Philipp Jauss",
+  "type": "module",
   "scripts": {
-    "watch": "gulp",
-    "build": "gulp build"
+    "build": "node build.mjs build",
+    "watch": "onchange 'src/**/*' -- node build.mjs build",
+    "serve": "serve app",
+    "clean": "rm -rf app"
   },
   "repository": {
     "type": "git",
@@ -18,20 +20,15 @@
   },
   "homepage": "https://github.com/philippjauss/philippjauss.gate107.com#readme",
   "devDependencies": {
-    "browser-sync": "^2.18.8",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^5.0.0",
-    "gulp-htmlmin": "^4.0.0",
-    "gulp-imagemin": "^4.1.0",
-    "gulp-inline-source": "^3.1.0",
-    "gulp-sass": "^5.1.0",
-    "gulp-webp": "^3.0.0",
-    "imagemin-gifsicle": "^5.1.0",
-    "imagemin-jpegtran": "^5.0.2",
-    "imagemin-optipng": "^5.2.1",
-    "imagemin-pngquant": "^9.0.2",
-    "imagemin-webp": "^4.1.0",
-    "workbox-build": "^3.2.0",
-    "node-sass": "^4.11.0"
+    "autoprefixer": "^10.4.20",
+    "cheerio": "^1.0.0",
+    "html-minifier-terser": "^7.0.0",
+    "onchange": "^7.1.0",
+    "postcss": "^8.5.1",
+    "postcss-cli": "^11.0.0",
+    "sass": "^1.83.0",
+    "serve": "^14.2.4",
+    "sharp": "^0.33.5",
+    "workbox-build": "^7.3.0"
   }
 }

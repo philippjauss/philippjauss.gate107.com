@@ -1,16 +1,16 @@
-importScripts('https://storage.googleapis.com/workbox-cdn/releases/3.2.0/workbox-sw.js');
-workbox.precaching.precacheAndRoute([]);
+// Service Worker for philippjauss.gate107.com
+// Workbox v7 compatible
 
+importScripts('https://storage.googleapis.com/workbox-cdn/releases/7.3.0/workbox-sw.js');
+
+// Precache files injected by workbox-build
+workbox.precaching.precacheAndRoute(self.__WB_MANIFEST);
+
+// Cache images, HTML, JS, JSON with network-first strategy
 workbox.routing.registerRoute(
-    /.*\.(?:png|jpg|jpeg|svg|gif|webp|html|js|json|ico)/,
-    workbox.strategies.networkFirst({
-        networkTimetoutSeconds: 2,
-        cacheName: 'fullsite',
-        plugins: [
-            new workbox.expiration.Plugin({
-                maxEntries: 50,
-                maxAgeSeconds: 5 * 60, // 5 minutes
-            }),
-        ],
-    })
+  /\.(?:png|jpg|jpeg|svg|gif|webp|html|js|json|ico)$/,
+  new workbox.strategies.NetworkFirst({
+    networkTimeoutSeconds: 2,
+    cacheName: 'fullsite',
+  }),
 );
