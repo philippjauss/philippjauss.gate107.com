@@ -27,7 +27,7 @@ npm run serve
 │   ├── img/          # Images
 │   ├── *.html        # Pages
 │   └── sw.js         # Service worker source
-├── app/              # Build output (git-ignored)
+├── app/              # Build output (committed — served directly by the webserver)
 ├── build.mjs         # Build script
 └── package.json
 ```
