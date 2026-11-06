@@ -36,11 +36,11 @@ async function clean() {
   info('Cleaned app/ directory');
 }
 
-async function compileSass() {
+async function compileCss() {
   await ensureDir(resolve(APP, 'css'));
-  run('npx', ['sass', 'src/css/site.scss', 'app/css/site.css', '--no-source-map', '--style=compressed']);
+  await copyFile(resolve(SRC, 'css', 'site.css'), resolve(APP, 'css', 'site.css'));
   run('npx', ['postcss', 'app/css/site.css', '--replace', '--no-map']);
-  info('Sass compiled & autoprefixed');
+  info('CSS copied & autoprefixed');
 }
 
 async function inlineAndMinifyHTML() {
@@ -59,9 +59,9 @@ async function inlineAndMinifyHTML() {
         if (href) cssLinks.push({ el, href });
       });
 
-      // Read and inline CSS files
+      // Read and inline CSS files (from the built, autoprefixed output)
       for (const { el, href } of cssLinks) {
-        const cssFile = resolve(SRC, 'css', basename(href));
+        const cssFile = resolve(APP, 'css', basename(href));
         try {
           const css = await readFile(cssFile, 'utf8');
           $(el).replaceWith(`<style>${css}</style>`);
@@ -177,7 +177,7 @@ const task = process.argv[2] || 'build';
 
 const tasks = {
   clean: async () => { await clean(); },
-  sass: async () => { await compileSass(); },
+  css: async () => { await compileCss(); },
   html: async () => { await inlineAndMinifyHTML(); },
   images: async () => { await processImages(); },
   static: async () => { await copyStatic(); },
@@ -185,7 +185,7 @@ const tasks = {
   build: async () => {
     console.log('🔨 Building...');
     await clean();
-    await compileSass();
+    await compileCss();
     await copyStatic();
     await processImages();
     await inlineAndMinifyHTML();
@@ -198,6 +198,6 @@ if (tasks[task]) {
   await tasks[task]();
 } else {
   console.error(`❌ Unknown task: ${task}`);
-  console.log('Available tasks: clean, sass, html, images, static, sw, build');
+  console.log('Available tasks: clean, css, html, images, static, sw, build');
   process.exit(1);
 }

@@ -26,7 +26,6 @@
     "onchange": "^7.1.0",
     "postcss": "^8.5.1",
     "postcss-cli": "^11.0.0",
-    "sass": "^1.83.0",
     "serve": "^14.2.4",
     "sharp": "^0.33.5",
     "workbox-build": "^7.3.0"

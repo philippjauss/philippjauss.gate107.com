@@ -25,7 +25,7 @@ npm run clean        # delete app/
 Individual build steps (run directly if you only need one):
 
 ```bash
-node build.mjs clean | sass | html | images | static | sw | build
+node build.mjs clean | css | html | images | static | sw | build
 ```
 
 There is **no test suite, linter, or type checker** configured. To verify a
@@ -36,7 +36,7 @@ page in a browser.
 
 ```
 ├── src/              # SOURCE — edit here
-│   ├── css/site.scss # Main stylesheet (the only CSS you edit)
+│   ├── css/site.css  # Main stylesheet (the only CSS you edit)
 │   ├── img/          # Source images
 │   ├── *.html        # Pages (index, uebermich, cv, kontakt)
 │   ├── sw.js         # Service worker source (Workbox)
@@ -50,7 +50,7 @@ page in a browser.
 ## Build pipeline (order in `build.mjs`)
 
 1. `clean` — wipe `app/`
-2. `sass` — compile `site.scss` → compressed CSS, then PostCSS/Autoprefixer
+2. `css` — copy `site.css` → `app/css/`, then PostCSS/Autoprefixer
 3. `static` — copy `.htaccess`, `manifest.json`, `robots.txt`, `sitemap.xml`,
    `favicon.ico`, `cv.pdf`, `cvphilippjauss.pdf`
 4. `images` — Sharp: PNG (effort 9), JPEG (q85, progressive), and generate a
@@ -64,9 +64,9 @@ page in a browser.
   `app/` directly. Do **not** add `app/` to `.gitignore`. After changing
   anything in `src/`, you must `npm run build` **and commit the regenerated
   `app/`**, or the live site will not update.
-- **Edit `src/css/site.scss`, never `site.css`.** `site.css` is a build
-  artifact (it is listed in `.gitignore`, though a stale copy is still tracked
-  in git — treat it as generated and overwrite it via the build).
+- **Edit `src/css/site.css`.** It is the single source of truth for all styles
+  (plain CSS, no preprocessor). The build copies it to `app/css/site.css` and
+  inlines it into each page.
 - **CSS inlining is opt-in via the `inline` attribute.** The build only inlines
   a stylesheet if its `<link>` tag carries the `inline` attribute
   (`<link inline rel="stylesheet" href="/css/site.css" />`). Removing `inline`

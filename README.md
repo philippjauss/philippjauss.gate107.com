@@ -23,7 +23,7 @@ npm run serve
 ```
 ├── src/              # Source files (edit here)
 │   ├── css/
-│   │   └── site.scss # Main stylesheet
+│   │   └── site.css  # Main stylesheet
 │   ├── img/          # Images
 │   ├── *.html        # Pages
 │   └── sw.js         # Service worker source
@@ -34,7 +34,7 @@ npm run serve
 
 ## Build Pipeline
 
-1. **Sass** → compressed CSS with autoprefixer
+1. **CSS** → copied to output, then autoprefixed
 2. **Images** → optimized JPEG/PNG + WebP generation via Sharp
 3. **HTML** → CSS/JS inlined, then minified
 4. **Service Worker** → Workbox caching manifest injected
@@ -49,7 +49,7 @@ npm run serve
 
 ## Tech Stack
 
-- **Sass** (Dart Sass) + **PostCSS** (Autoprefixer)
+- **PostCSS** (Autoprefixer) for CSS
 - **Sharp** for image optimization
 - **Workbox** for PWA service worker
 - **Cheerio** + **html-minifier-terser** for HTML processing
