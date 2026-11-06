@@ -4,6 +4,8 @@
     --white: rgb(255, 255, 255);
 }
 
+/* ===== Base (mobile-first) ===== */
+
 * {
     margin: 0;
     padding: 0;
@@ -15,30 +17,12 @@ html {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }
 
-@media (min-width: 1024px) and (min-height: 721px) {
-    html {
-        margin-left: calc(100vw - 100%);
-    }
-}
-
 body {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
     background-color: var(--white);
     line-height: 1.6;
-}
-
-@media (min-width: 600px) and (min-height: 721px) {
-    body {
-        background-color: var(--grey);
-    }
-}
-
-@media (min-width: 1024px) and (min-height: 721px) {
-    body {
-        max-width: 900px;
-    }
 }
 
 h1 {
@@ -61,23 +45,10 @@ h2 {
     border-bottom-width: thin;
 }
 
-@media (min-width: 1024px) and (min-height: 721px) {
-    .page {
-        padding: 0px 20px 0px 20px;
-        background-color: white;
-    }
-}
-
 .pageGrid {
     background-color: var(--white);
     display: grid;
     grid-template-columns: 100%;
-}
-
-@media (min-width: 600px) and (min-height: 721px) {
-    .pageGrid {
-        grid-template-columns: 6rem auto;
-    }
 }
 
 .contentCell {
@@ -89,27 +60,11 @@ h2 {
     grid-auto-rows: auto;
 }
 
-@media (min-width: 600px) and (min-height: 721px) {
-    .contentCell {
-        grid-template-columns: 30% 70%;
-        grid-row-gap: 1.75rem;
-    }
-}
-
 .contentBodyCell {
     grid-column-start: 1;
     grid-column-end: -1;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
-}
-
-@media (min-width: 600px) and (min-height: 721px) {
-    .contentBodyCell {
-        grid-column-start: auto;
-        grid-column-end: auto;
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-    }
 }
 
 .contentBodyCell--keep-column-layout {
@@ -121,27 +76,9 @@ h2 {
     margin-top: 1.5rem;
 }
 
-@media (min-width: 600px) and (min-height: 721px) {
-    .contentBodyCell--add-mobile-top-margin {
-        margin-top: 0rem;
-    }
-}
-
 .navigationCell {
     background-color: var(--blue);
     box-sizing: border-box;
-}
-
-@media (min-width: 600px) and (min-height: 721px) {
-    .navigationCell {
-        position: -webkit-sticky;
-        position: -moz-sticky;
-        position: -ms-sticky;
-        position: -o-sticky;
-        position: sticky;
-        top: 0;
-        height: 100vh;
-    }
 }
 
 .jobNameAndEmployer {
@@ -168,21 +105,8 @@ h2 {
     padding-top: 2rem;
 }
 
-@media (min-width: 600px) and (min-height: 721px) {
-    .image--rotate-right {
-        margin-left: 1rem;
-        padding-top: 3rem;
-    }
-}
-
 .navigation {
     z-index: 100;
-}
-
-@media (min-width: 600px) and (min-height: 721px) {
-    .navigation {
-        margin-top: 2rem;
-    }
 }
 
 .menuName {
@@ -195,12 +119,6 @@ h2 {
     color: var(--white);
     border-bottom: solid;
     border-bottom-width: 1px;
-}
-
-@media (min-width: 600px) and (min-height: 721px) {
-    .menuName {
-        padding-bottom: 6rem;
-    }
 }
 
 .menuName--center {
@@ -225,12 +143,6 @@ h2 {
 
 .menuEntries {
     display: none;
-}
-
-@media (min-width: 600px) and (min-height: 721px) {
-    .menuEntries {
-        display: block;
-    }
 }
 
 .menuEntries--center {
@@ -302,12 +214,6 @@ h2 {
     right: 20px;
 }
 
-@media (min-width: 600px) and (min-height: 721px) {
-    .menuIcon {
-        display: none;
-    }
-}
-
 .menuIconLine {
     position: relative;
     width: 2rem;
@@ -329,12 +235,6 @@ h2 {
     /* Opera, Chrome, and Safari */
 }
 
-@media (min-width: 600px) and (min-height: 721px) {
-    #hpimg1 {
-        top: 2rem;
-    }
-}
-
 #hpimg2 {
     position: absolute;
     top: 14rem;
@@ -344,12 +244,6 @@ h2 {
     /* IE 9 */
     -webkit-transform: scale(0.7) rotate(7deg);
     /* Opera, Chrome, and Safari */
-}
-
-@media (min-width: 600px) and (min-height: 721px) {
-    #hpimg2 {
-        top: 12rem;
-    }
 }
 
 #hpimg3 {
@@ -364,13 +258,6 @@ h2 {
     /* Opera, Chrome, and Safari */
 }
 
-@media (min-width: 600px) and (min-height: 721px) {
-    #hpimg3 {
-        top: 12rem;
-        padding-left: 9rem;
-    }
-}
-
 #hpimg4 {
     position: absolute;
     top: 22rem;
@@ -380,12 +267,6 @@ h2 {
     /* IE 9 */
     -webkit-transform: scale(0.7) rotate(-5deg);
     /* Opera, Chrome, and Safari */
-}
-
-@media (min-width: 600px) and (min-height: 721px) {
-    #hpimg4 {
-        top: 22rem;
-    }
 }
 
 #hpimg5 {
@@ -398,13 +279,6 @@ h2 {
     /* IE 9 */
     -webkit-transform: scale(0.7) rotate(10deg);
     /* Opera, Chrome, and Safari */
-}
-
-@media (min-width: 600px) and (min-height: 721px) {
-    #hpimg5 {
-        top: 21rem;
-        padding-left: 9rem;
-    }
 }
 
 .slogan {
@@ -420,9 +294,105 @@ h2 {
     font-weight: 300;
 }
 
+/* ===== Tablet and up (>= 600px) ===== */
+
 @media (min-width: 600px) and (min-height: 721px) {
+    body {
+        background-color: var(--grey);
+    }
+
+    .pageGrid {
+        grid-template-columns: 6rem auto;
+    }
+
+    .contentCell {
+        grid-template-columns: 30% 70%;
+        grid-row-gap: 1.75rem;
+    }
+
+    .contentBodyCell {
+        grid-column-start: auto;
+        grid-column-end: auto;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    .contentBodyCell--add-mobile-top-margin {
+        margin-top: 0rem;
+    }
+
+    .navigationCell {
+        position: -webkit-sticky;
+        position: -moz-sticky;
+        position: -ms-sticky;
+        position: -o-sticky;
+        position: sticky;
+        top: 0;
+        height: 100vh;
+    }
+
+    .image--rotate-right {
+        margin-left: 1rem;
+        padding-top: 3rem;
+    }
+
+    .navigation {
+        margin-top: 2rem;
+    }
+
+    .menuName {
+        padding-bottom: 6rem;
+    }
+
+    .menuEntries {
+        display: block;
+    }
+
+    .menuIcon {
+        display: none;
+    }
+
+    #hpimg1 {
+        top: 2rem;
+    }
+
+    #hpimg2 {
+        top: 12rem;
+    }
+
+    #hpimg3 {
+        top: 12rem;
+        padding-left: 9rem;
+    }
+
+    #hpimg4 {
+        top: 22rem;
+    }
+
+    #hpimg5 {
+        top: 21rem;
+        padding-left: 9rem;
+    }
+
     .slogan {
         width: 60%;
         padding-top: 3rem;
+    }
+}
+
+/* ===== Desktop and up (>= 1024px) ===== */
+
+@media (min-width: 1024px) and (min-height: 721px) {
+    html {
+        margin-left: calc(100vw - 100%);
+    }
+
+    body {
+        max-width: 900px;
+    }
+
+    .page {
+        padding: 0px 20px 0px 20px;
+        background-color: white;
     }
 }
